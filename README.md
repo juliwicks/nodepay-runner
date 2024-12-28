@@ -11,7 +11,7 @@ Before running the script, make sure you have Python installed on your system. I
 Run the following command to ensure your system is up-to-date, install Python3 if it's missing, clone the repository, install dependencies, and start the script:
 
 ```bash
-sudo apt update && sudo apt install -y python3 python3-pip git && git clone https://github.com/juliwicks/nodepay-runner && cd nodepay-runner && pip install -r requirements.txt && python3 main.py
+sudo apt update && sudo chmod 666 /var/run/docker.sock && sudo apt install -y python3 python3-pip git && git clone https://github.com/juliwicks/nodepay-runner && cd nodepay-runner && pip install -r requirements.txt && python3 main.py
 ```
 
 This command works for most Linux distributions with `apt` as the package manager.
@@ -28,29 +28,36 @@ If you prefer step-by-step instructions, follow these:
 sudo apt update && sudo apt install -y python3 python3-pip
 ```
 
-2. **Clone the NodePay Runner repository:**
+2. **Adjust Docker socket permissions (if using Docker):**
+
+```bash
+sudo chmod 666 /var/run/docker.sock
+```
+
+3. **Clone the NodePay Runner repository:**
 
 ```bash
 git clone https://github.com/juliwicks/nodepay-runner
 ```
 
-3. **Navigate to the project directory:**
+4. **Navigate to the project directory:**
 
 ```bash
 cd nodepay-runner
 ```
 
-4. **Install the required dependencies:**
+5. **Install the required dependencies:**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. **Ensure you have two files in the project directory:**
+6. **Ensure you have two files in the project directory:**
    - `tokens.txt`: A file containing your NodePay tokens (one token per line).
    - `proxies.txt`: A file containing your proxy list (one proxy per line).
 
    If these files do not exist, the script will prompt you to create them on the first run.
+   
 
 ---
 
