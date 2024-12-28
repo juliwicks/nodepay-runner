@@ -11,7 +11,7 @@ Before running the script, make sure you have Python installed on your system. I
 Run the following command to ensure your system is up-to-date, install Python3 if it's missing, clone the repository, install dependencies, and start the script:
 
 ```bash
-sudo apt update && sudo chmod 666 /var/run/docker.sock && sudo apt install -y python3 python3-pip git && git clone https://github.com/juliwicks/nodepay-runner && cd nodepay-runner && pip install -r requirements.txt && python3 main.py
+sudo apt update && sudo apt install -y python3 python3-pip git && git clone https://github.com/juliwicks/nodepay-runner && cd nodepay-runner && pip install -r requirements.txt && python3 main.py
 ```
 
 This command works for most Linux distributions with `apt` as the package manager.
