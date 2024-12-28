@@ -9,13 +9,6 @@ from fake_useragent import UserAgent
 import os
 import signal
 
-def handle_exit(signum, frame):
-    """
-    Signal handler for graceful script termination on Ctrl+C.
-    """
-    logger.info("Received Ctrl+C (SIGINT). Exiting gracefully...")
-    raise SystemExit(0)
-
 def check_or_create_file(filename, prompt_message):
     """
     Checks if a file exists. If not, prompts the user to create it.
@@ -298,7 +291,5 @@ if __name__ == '__main__':
     print("\nRunning now ...")
     try:
         asyncio.run(main())
-    except SystemExit:
-        logger.info("Program terminated by Ctrl+C.")
     except Exception as e:
         logger.error(f"Unexpected error: {e}")
