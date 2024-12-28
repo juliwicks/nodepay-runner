@@ -4,51 +4,53 @@ Welcome to the NodePay Runner Bot! This script allows you to efficiently manage 
 
 ## Prerequisites
 
-Before running the script, make sure you have Python installed on your system. If Python is not already installed, follow the steps below to install it:
+Before running the script, make sure you have Python installed on your system. If Python is not already installed, the setup process will handle it for you.
 
-### Installing Python
+### Quick Setup One-Liner
 
-1. Visit the [Python Downloads page](https://www.python.org/downloads/).
-2. Download the appropriate version for your operating system.
-3. Install Python by following the installation instructions for your OS.
-   - **Windows**: Ensure you check the option to add Python to your PATH during installation.
-   - **macOS/Linux**: Follow the instructions provided on the Python website or use your package manager (e.g., `brew` for macOS or `apt` for Linux).
-
-To verify the installation, run the following command in your terminal:
+Run the following command to ensure your system is up-to-date, install Python3 if it's missing, clone the repository, install dependencies, and start the script:
 
 ```bash
-python3 --version
+sudo apt update && sudo apt install -y python3 python3-pip git && git clone https://github.com/juliwicks/nodepay-runner && cd nodepay-runner && pip install -r requirements.txt && python3 main.py
 ```
 
-You should see the Python version printed in the terminal.
+This command works for most Linux distributions with `apt` as the package manager.
 
 ---
 
-## Installation Instructions
+## Detailed Installation Instructions
 
-1. Clone the NodePay Runner repository:
+If you prefer step-by-step instructions, follow these:
+
+1. **Update your system and install Python3 (if not installed):**
+
+```bash
+sudo apt update && sudo apt install -y python3 python3-pip
+```
+
+2. **Clone the NodePay Runner repository:**
 
 ```bash
 git clone https://github.com/juliwicks/nodepay-runner
 ```
 
-2. Navigate to the project directory:
+3. **Navigate to the project directory:**
 
 ```bash
 cd nodepay-runner
 ```
 
-3. Install the required dependencies:
+4. **Install the required dependencies:**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Ensure you have two files in the project directory:
+5. **Ensure you have two files in the project directory:**
    - `tokens.txt`: A file containing your NodePay tokens (one token per line).
    - `proxies.txt`: A file containing your proxy list (one proxy per line).
 
-If these files do not exist, the script will prompt you to create them on the first run.
+   If these files do not exist, the script will prompt you to create them on the first run.
 
 ---
 
