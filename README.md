@@ -1,6 +1,7 @@
 # NodePay Runner Bot
 
 Welcome to the NodePay Runner Bot! This script allows you to efficiently manage multiple accounts and proxies for NodePay.
+This is a Basic Script, you can go to https://github.com/juliwicks/nodepay-runner-with-docker if you want to run it via docker container
 
 ## Prerequisites
 
