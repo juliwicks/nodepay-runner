@@ -4,5 +4,3 @@ fake-useragent
 loguru
 requests
 colorama
-time
-signal
